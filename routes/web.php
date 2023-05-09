@@ -52,5 +52,32 @@ Route::get('/', function () {
         ],
 
     ];
-    return view('homepage', compact('navbarLinks', 'comics', 'mainLinks'));
+
+    $footerLinks = [
+
+        [
+            'title' => 'DC Comics',
+            'links' => ['Characters', 'Comics', 'Movies', 'TV', 'Games', 'Videos', 'News']
+        ],
+
+
+        [
+            'title' => 'Shop',
+            'links' => ['Shop Dc', 'Shop Dc Collectibles']
+        ],
+
+
+        [
+            'title' => 'Dc',
+            'links' => ['Terms Of Use', 'Privacy Policy(New)', 'Ad Choisese', 'Advertising', 'Jobs', 'Subscriptions', 'Talent WorkShops', 'CSPSC Certificates', 'Rating', 'Shop Help', 'Contact Us']
+        ],
+
+
+        [
+            'title' => 'Sites',
+            'links' => ['DC', 'MAD Magazine', 'DC Kids', 'DC Universe', 'DC Power Visa']
+        ],
+
+    ];
+    return view('homepage', compact('navbarLinks', 'comics', 'mainLinks', 'footerLinks'));
 });

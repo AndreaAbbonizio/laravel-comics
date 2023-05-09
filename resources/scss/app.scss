@@ -1,5 +1,16 @@
 @import '~bootstrap/scss/bootstrap';
 
+header .container-visa {
+    background-color: #0c7cec;
+
+    .container {
+        display: flex;
+        justify-content: flex-end;
+        gap: 50px;
+        color: white;
+        font-size: .8em;
+    }
+}
 
 nav .container {
     display: flex;
@@ -175,4 +186,85 @@ main #container-main {
 
 
     }
+}
+
+footer #container-footer {
+    position: relative;
+    background-image: url("../images/footer-bg.jpg");
+    background-size: cover;
+    overflow: hidden;
+
+    #container-list {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        height: 350px;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    strong {
+        font-size: 1.2em;
+        color: white;
+        z-index: 2;
+    }
+
+    ul {
+        width: 200px;
+        z-index: 2;
+        color: darkgrey;
+        list-style-type: none;
+
+    }
+
+
+    #background-logo {
+        z-index: 2;
+        width: 500px;
+        height: 500px;
+        transform: translateY(-25%);
+
+        img {
+            height: 100%;
+        }
+
+    }
+
+}
+
+
+footer #container-bg-footer-nav {
+    position: relative;
+    background-color: #303030;
+    padding: 20px;
+
+    #container-footer-nav {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1000px;
+        margin: 0 auto;
+
+
+        button {
+            padding: 10px;
+            color: white;
+            border-color: #0c7cec;
+            background-color: #303030;
+        }
+
+    }
+
+    #container-icons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+
+        strong {
+            color: #0c7cec;
+        }
+    }
+
 }

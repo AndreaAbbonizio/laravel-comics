@@ -1,4 +1,14 @@
 <header>
+    <div class="container-visa">
+        <div class="container">
+            <div class="power-visa">
+                DC POWER VISA
+            </div>
+            <div class="additional-sites">
+                ADDITIONAL DC SITES
+            </div>
+        </div>
+    </div>
     <nav>
         <div class="container">
             <div class="container-logo">
