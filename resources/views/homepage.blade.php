@@ -1,26 +1,40 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+@extends('layouts/layout')
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@section('content')
 
-    <title>Laravel</title>
-
-    <!-- Fonts -->
-    <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <!-- Styles -->
-    @vite('resources/js/app.js')
-
-</head>
-
-<body>
-
-    <div class="container">
-        ciao
+<div class="container-jumbotron">
+    <img src='{{Vite::asset('resources/images/jumbotron.jpg')}}' alt="Jumbotron">
+</div>
+<main>
+    <div class="background-series">
+        <span id="current-series">CURRENT SERIES</span>
+        <div class="container-series">
+            @foreach($comics as $singleComic)
+            <div class="card-series">
+                <img src="{{$singleComic['thumb']}}" alt="">
+                <p id="title">{{$singleComic['series']}}</p>
+            </div> 
+            @endforeach
+        </div>
+    
+        <div class="load-more">
+            <span>LOAD MORE</span>
+        </div>
+    
+    </div>
+    <div id="container-main">
+        <div id="main-links">
+            <ul>
+                @foreach( $mainLinks as $mainLink)
+                <li>
+                    <img src='{{Vite::asset($mainLink['image'])}}' alt="">
+                    <span>{{$mainLink['title']}}</span>
+                </li>
+                @endforeach
+            </ul>
+        </div>
     </div>
 
-</body>
+</main>
 
-</html>
+@endsection
